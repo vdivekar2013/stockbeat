@@ -1,17 +1,19 @@
 package in.co.nitro.stockbeat;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import in.co.nitro.stockbeat.data.Instrument;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 
 public class StockBeatActivity extends ActionBarActivity {
+	
+	// Below is the main instrument list which is used throughout the code
+	private List<Instrument> instrumentList = new ArrayList<Instrument>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,14 @@ public class StockBeatActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	public List<Instrument> getInstrumentList() {
+		return instrumentList;
+	}
+
+	public void setInstrumentList(List<Instrument> instrumentList) {
+		this.instrumentList = instrumentList;
 	}
 
 }

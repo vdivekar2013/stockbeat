@@ -1,4 +1,4 @@
-package in.co.nitro.data.stockbeat;
+package in.co.nitro.stockbeat.data;
 
 public class Instrument {
 
